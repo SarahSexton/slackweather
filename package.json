@@ -19,6 +19,7 @@
   "dependencies": {
     "botbuilder": "^0.11.1",
     "express": "^4.13.4",
+    "https": "^1.0.0",
     "openweathermap": "^1.0.0",
     "restify": "^4.1.0"
   }
