@@ -1,2 +1,2 @@
 # slackweather
-weather
+weather bot
