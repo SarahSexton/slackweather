@@ -6,11 +6,11 @@ var Weather  = require('openweathermap');
 var weatherKey = process.env.WEATHER_KEY || "Missing weather API key"; 
 //var weather = new Weather(weatherKey);
 
-// var myAppId = process.env.MY_APP_ID || "Missing your app ID";
-// var myAppSecret = process.env.MY_APP_SECRET || "Missing your app secret"; 
+ var myAppId = process.env.MY_APP_ID || "Missing your app ID";
+ var myAppSecret = process.env.MY_APP_SECRET || "Missing your app secret"; 
 
 // Create bot and add dialogs
-var bot = new builder.BotConnectorBot({appId: process.env.MY_APP_ID, appSecret: process.env.MY_APP_SECRET });
+var bot = new builder.BotConnectorBot({appId: myAppId, appSecret: myAppSecret });
 // bot.add('/', new builder.SimpleDialog(function (session) { 
 //      session.send('Hello World'); 
 //  })); 

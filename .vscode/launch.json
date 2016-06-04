@@ -23,7 +23,7 @@
 			"env": {
 				"NODE_ENV": "development",
 				"WEATHER_KEY": "51ad47f345afd1f057b90d9819cc1ff4",
-				"MY_API_ID" : "slackweather",
+				"MY_APP_ID" : "slackweather",
 				"MY_APP_SECRET" : "d563b773c27645a3b106ebea63141ca6"
 			},
 			// Use JavaScript source maps (if they exist).
