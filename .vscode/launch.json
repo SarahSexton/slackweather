@@ -8,20 +8,23 @@
 			// Type of configuration.
 			"type": "node",
 			// Workspace relative or absolute path to the program.
-			"program": "app.js",
+			"program": "${workspaceRoot}/app.js",
 			// Automatically stop program after launch.
 			"stopOnEntry": false,
 			// Command line arguments passed to the program.
 			"args": [],
 			// Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
-			"cwd": ".",
+			"cwd": "${workspaceRoot}/.",
 			// Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
 			"runtimeExecutable": null,
 			// Optional arguments passed to the runtime executable.
 			"runtimeArgs": ["--nolazy"],
 			// Environment variables passed to the program.
 			"env": {
-				"NODE_ENV": "development"
+				"NODE_ENV": "development",
+				"WEATHER_KEY": "51ad47f345afd1f057b90d9819cc1ff4",
+				"MY_API_ID" : "slackweather",
+				"MY_APP_SECRET" : "d563b773c27645a3b106ebea63141ca6"
 			},
 			// Use JavaScript source maps (if they exist).
 			"sourceMaps": false,
