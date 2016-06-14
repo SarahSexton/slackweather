@@ -40,7 +40,7 @@ bot.add('/weather',
      function (session, results) 
      {
         try {
-        var txt = results.matches.input;
+        var txt = session.message.text;
         txt = txt.replace('weather ','');
         var city = txt.split(',')[0].trim().replace(' ','_');
         var state = txt.split(',')[1].trim();
@@ -62,7 +62,7 @@ bot.add('/weather',
                 {
                     var data = JSON.parse(body);
                     var conditions = data.current_observation.weather;
-                    session.send("It appears to be " + conditions + " in "
+                    session.send("Conditions say '" + conditions + "' in "
                 + city + " right now, and the temperature is "
                 + data.current_observation.temp_f + " degrees F.   "
                 + data.current_observation.observation_time);
@@ -71,7 +71,6 @@ bot.add('/weather',
          }
          catch (e) {
         session.send("Whoops, that didn't match! Try again.");
-        s.endDialog({ resumed: dialog.ResumeReason.notCompleted, error: e instanceof Error ? e : new Error(e.toString()) });        
          }
     },
 ]);
