@@ -32,7 +32,7 @@ var myAppSecret = process.env.MY_APP_SECRET || "Missing your app secret";
      {
          if (session.userData.location) { session.beginDialog('/weather'); }
          else
-         { builder.Prompts.text(session, "Hello. I can tell you about any city if you type, for example, 'weather London, UK'."); }
+         { builder.Prompts.text(session, "Hello. I can tell you about any city; for example, 'weather London, UK'."); }
      }
  ]);
 bot.add('/weather', 
@@ -62,7 +62,7 @@ bot.add('/weather',
                 {
                     var data = JSON.parse(body);
                     var conditions = data.current_observation.weather;
-                    session.send("Conditions say '" + conditions + "' in "
+                    session.send("'" + conditions + "' in "
                 + city + " right now, and the temperature is "
                 + data.current_observation.temp_f + " degrees F.   "
                 + data.current_observation.observation_time);
